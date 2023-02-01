@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SalesWeb_MVC.Models;
 using System.Diagnostics;
+using SalesWeb_MVC.Models.ViewModels;
 
 namespace SalesWeb_MVC.Controllers
 {
@@ -15,7 +16,9 @@ namespace SalesWeb_MVC.Controllers
 
         public IActionResult Index()
         {
+            ViewData["message"] = "Welcome to my application MVC";
             return View();
+
         }
 
         public IActionResult Privacy()
